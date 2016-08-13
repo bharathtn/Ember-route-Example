@@ -7,6 +7,13 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('games');
+  this.route('photos', function() {
+    this.route('1');
+    this.route('2');
+    this.route('sports',{path:'/sports/:width/:height'});
+    this.route('lifestyle');
+  });
 });
 
 export default Router;
